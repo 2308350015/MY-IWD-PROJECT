@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <i class="fas fa-cloud-sun"></i> MyWeatherApp
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Default Information / Tips (Before search) -->
+        <div class="default-info">
+            <h2>Welcome to MyWeatherApp</h2>
+            <p>Get the latest weather updates from cities around the world. Just enter the city name above and hit search!</p>
+            <div class="icon-tips">
+                <div class="icon-tip">
+                    <i class="fas fa-cloud-sun"></i>
+                    <p>Sunny</p>
+                </div>
+                <div class="icon-tip">
+                    <i class="fas fa-cloud-rain"></i>
+                    <p>Rainy</p>
+                </div>
+                <div class="icon-tip">
+                    <i class="fas fa-snowflake"></i>
+                    <p>Snowy</p>
+                </div>
+                <div class="icon-tip">
+                    <i class="fas fa-smog"></i>
+                    <p>Smoggy</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header with Search -->
+        <div class="header">
+            <h1>Weather App</h1>
+            <div class="search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="city-input" placeholder="Enter city name" />
+                <button id="search-btn">Search</button>
+            </div>
+            <p class="search-tip">Enter a city to get real-time weather updates!</p>
+        </div>
+
+        <!-- Weather display (Hidden by default) -->
+        <div id="weather-display" class="weather-display hidden">
+            <!-- Main Weather Section -->
+            <div class="main-weather">
+                <h2 id="city-name"></h2>
+                <h3 id="current-date"></h3>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <h3 id="temperature"></h3>
+                <h4 id="weather-condition"></h4>
+            </div>
+
+            <!-- Extra Weather Information -->
+            <div class="extra-weather">
+                <div class="info-card">
+                    <i class="fas fa-tint"></i>
+                    <p>Humidity</p>
+                    <p id="humidity"></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-wind"></i>
+                    <p>Wind Speed</p>
+                    <p id="wind-speed"></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-cloud"></i>
+                    <p>Cloudiness</p>
+                    <p id="cloudiness"></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-sun"></i>
+                    <p>Sunrise</p>
+                    <p id="sunrise"></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-moon"></i>
+                    <p>Sunset</p>
+                    <p id="sunset"></p>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast Section -->
+            <div id="forecast-section" class="forecast hidden">
+                <h3>5-Day Weather Forecast</h3>
+                <div id="forecast" class="forecast-cards"></div>
+            </div>
+        </div>
+
+        <!-- Error and Loading Section -->
+        <div id="error-message" class="error-message hidden">City not found. Please try again.</div>
+        <div id="loading-message" class="loading-message hidden">Loading weather data...</div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="credits">
+            <td align="middle"><span class="copyright">All Rights Reserved. <br>
+              Designed and Maintained
+              By LAZAROUS KOLALA  <br> SIN:2308350015 
+            </td>
+              <li><a target="_blank" href="http://www.icuzambia.net">ICU Zambia</a></li>
+              <li><a target="_blank" href="https://www.zrdc.org">ZRDC</a></li>
+        </div>
+    </footer>
+</body>
+</html>
